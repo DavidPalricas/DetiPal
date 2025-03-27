@@ -13,6 +13,7 @@ Follow the steps below to set up and run the project.
 
 ### 2. Install Rasa
 ```bash
+# In the Anaconda Prompt
 conda create --name rasa-env python=3.10
 conda activate rasa-env
 pip install rasa
