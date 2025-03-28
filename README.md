@@ -22,7 +22,7 @@ pip install rasa
 ### 3. Train the chatbot model
 ```bash
 # In the Anaconda Prompt
-rasa train
+rasa train --domain .
 ```
 
 ### 4. Test the chatbot
@@ -34,7 +34,7 @@ rasa shell
 **Note**: After completing the steps above for the first time, you can run all commands in a single line:
 ```bash
 # In the Anaconda Prompt
-activate rasa-env && rasa train && rasa shell
+activate rasa-env && rasa train --domain . && rasa shell
 ```
 
 ## Contributors
