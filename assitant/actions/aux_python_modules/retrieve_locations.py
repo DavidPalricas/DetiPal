@@ -2,7 +2,7 @@ import spacy
 
 class RetrieveLocations:
     """
-    The RetrieveLocations is a Singleton for extracting location information from text using spaCy NER.
+    The RetrieveLocations class is a Singleton for extracting location information from text using spaCy NER.
     
     This class implements the singleton pattern to ensure the spacy model is loaded only once.
     
@@ -16,7 +16,7 @@ class RetrieveLocations:
     @staticmethod
     def get_instance():
         """
-        Static method to get the singleton instance.
+        The get_instance Static method is used to get the singleton instance.
         
         Returns:
             RetrieveLocations: The singleton instance of the class
@@ -31,7 +31,7 @@ class RetrieveLocations:
     
     def __init__(self):
         """
-        Initializes the singleton instance and loads the spaCy model.
+        The __init__ method initializes the singleton instance and loads the spaCy model.
         
         Raises:
             Exception: If attempting to create multiple instances
@@ -45,7 +45,7 @@ class RetrieveLocations:
 
     def get_location(self, user_message: str) -> str:
         """
-        Extracts the first location from the user message using Named Entity Recognition (NER).
+        The get_location method extracts the first location from the user message using Named Entity Recognition (NER).
  
         Args:
             user_message: Input text to analyze for locations

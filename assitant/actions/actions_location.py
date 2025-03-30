@@ -2,10 +2,12 @@ from typing import Any, Text, Dict, List
 from dotenv import load_dotenv
 import googlemaps
 import os
+import actions.aux_python_modules.utils as utils
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 from actions.aux_python_modules.retrieve_locations import RetrieveLocations
+
 
 class ActionRetrieveLocation(Action):
     """ 
@@ -18,12 +20,16 @@ class ActionRetrieveLocation(Action):
     """
     
     def __init__(self):
-        """Initialize the  attribute of the class."""
+        """ The __init__ method initialize the  attribute of the class."""
 
         self.retireve_locations = RetrieveLocations.get_instance()
    
     def name(self) -> Text:
-        """Returns the action's name."""
+        """The name method returns the name of the action.
+        
+        Returns:
+            Text: The name of the action which is used to identify it in the Rasa domain file.
+        """
 
         return "action_retrieve_location"
     
@@ -31,7 +37,7 @@ class ActionRetrieveLocation(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         """
-        Executes the location retrieval action.
+        The run method executes the location retrieval action.
         
         Args:
             dispatcher: Rasa dispatcher for sending messages
@@ -58,22 +64,30 @@ class Give_points_of_interest(Action):
     Uses Google Maps Places API to find nearby places of specified types and displays
     detailed information including ratings, opening hours, and Google Maps links.
     
-    Methods:
-        name(): Returns action name
-        run(): Main execution method
-        get_intretests_points(): Core logic for finding points of interest
-        check_plural(): Converts plural place types to singular for API compatibility
+    Attributes:
+        gmaps (googlemaps.Client): Google Maps client for API requests.
+        retireve_locations (RetrieveLocations): Instance of RetrieveLocations for extracting locations from user messages.
     """
     
     def __init__(self):
-        """Initialize Google Maps client with API key and location retriever."""
+        """
+        The __init__ method Initialize the  Google Maps client atribute (gmaps) with API key 
+        and location retriever atibute (retireve_locations).
+        """
+        
+        # Load environment variables from .env file
         load_dotenv()
 
         self.gmaps = googlemaps.Client(key=os.getenv("GOOGLE_MAPS_API_KEY"))
         self.retireve_locations = RetrieveLocations.get_instance()
 
     def name(self) -> Text:
-        """Returns the action's identifier name."""
+        """The name method returns the name of the action.
+        
+        Returns:
+            Text: The name of the action which is used to identify it in the Rasa domain file.
+        """
+
         return "action_give_points_of_interest"
 
     def run(self, dispatcher: CollectingDispatcher,
@@ -117,7 +131,7 @@ class Give_points_of_interest(Action):
 
         If the location is not provided by the user(by the slot location or by the user message), it will not search the places, 
         and will ask the user to provide a location first.
-er.
+
         If any error occurs during the process, it will inform the user about it.
         
         Args:
@@ -191,25 +205,27 @@ er.
 
         response = f"I have found the best places in {location}:\n{divisory_line}"
         
-        for i, place in enumerate(best_places[:10], 1):
+        MAX_STARS_GOOGLE_MAPS = 5.0
+
+        MAX_PLACES_TO_SHOW = 10
+
+        for i, place in enumerate(best_places[:MAX_PLACES_TO_SHOW], 1):
             response += (
-                f"{i}- {place['name']}\n"
-                f"\tAddress: {place['vicinity']}\n"
-                f"\tRating: {place.get('rating', 'N/A')}\n\n"
-                f"\tLink: https://www.google.com/maps/place/?q=place_id:{place['place_id']}\n"
-                f"\tTotal reviews: {place.get('user_ratings_total', 'N/A')}\n"
+                f"{i}️⃣ {place['name']}\n"
+                f"📍 Address: {place['vicinity']}\n"
+                f"🌟 Rating: {utils.get_rating_stars(place.get('rating', None),MAX_STARS_GOOGLE_MAPS)}\n"
+                f"👥 Reviews: {place.get('user_ratings_total', 'N/A')}\n"
+                f"🔗 Map link: https://www.google.com/maps/place/?q=place_id:{place['place_id']}\n"
             )
             
             if 'opening_hours' in place:
-                response += "\tOpen: Yes\n" if place['opening_hours'].get('open_now', False) else "\tOpen: No\n"
+                response += "🟢 OPEN NOW!\n" if place['opening_hours'].get('open_now', False) else "🔴 CURRENTLY CLOSED\n"
             else:
-                response += "\tOpen: There is no information if the place is open\n"
+                response += "🟡 HOURS UNKNOWN\n"
             
             response += divisory_line
-            dispatcher.utter_message(text=response)
 
-            # Reset response for the next result
-            response = ""
+        dispatcher.utter_message(text=response)
 
     def check_plural(self, type_of_place: str) -> str:
         """

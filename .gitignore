@@ -1,4 +1,4 @@
 /assitant/.rasa/cache
-/assitant/actions/__pycache__/  
+**/__pycache__/
 /assitant/models/
 .env
