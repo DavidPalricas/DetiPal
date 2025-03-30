@@ -19,11 +19,11 @@ Follow the steps below to set up and run the project.
     TMDB_API_KEY = "YOUR API KEY"
 ```
 
-### 2. Open the Anaconda Prompt in the project directory
+### 2. Open 2 Anaconda Prompt in the project directory
 
 ### 3. Install Rasa and other dependecies
 ```bash
-# In the Anaconda Prompt
+# In one Anaconda Prompt
 conda create --name rasa-env python=3.10
 conda activate rasa-env
 pip install -r requirements.txt 
@@ -32,17 +32,17 @@ python -m spacy download en_core_web_lg
 
 ### 4. Train the chatbot model
 ```bash
-# In the Anaconda Prompt
+# In the previous Anaconda Prompt
 rasa train --domain .
 ```
 
 ### 5. Test the chatbot
 ```bash
-# In the Anaconda Prompt
+# In previous Anaconda Prompt
 rasa run actions
 
-# In other Anaconda Prompt in the same folder
-rasa shell --endpoints endpoints.yml
+# In the other Anaconda Prompt 
+activate rasa-env && rasa shell --endpoints endpoints.yml
 ```
 
 **Note**: After completing the steps above for the first time, you can run all commands in a single line:
