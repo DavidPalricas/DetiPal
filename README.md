@@ -51,7 +51,7 @@ activate rasa-env && rasa shell --endpoints endpoints.yml
 activate rasa-env && rasa train --domain . && rasa shell --endpoints endpoints.yml
 
 # On another Anaconda Prompt
-rasa run actions
+activate rasa-env && rasa run actions
 ```
 
 ## Contributors
