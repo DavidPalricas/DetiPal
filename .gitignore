@@ -1,3 +1,4 @@
 /assitant/.rasa/cache
 /assitant/actions/__pycache__/  
 /assitant/models/
+.venv/

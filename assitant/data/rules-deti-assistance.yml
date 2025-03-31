@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: course_list
+  steps:
+  - intent: course_list
+  - action: utter_course_list
+
+- rule: course_info
+  steps:
+  - intent: course_info
+  - action: utter_course_info
+
+- rule: disciplina_list
+  steps:
+  - intent: disciplina_list
+  - action: utter_disciplina_list
+
+- rule: disciplina_info
+  steps:
+  - intent: disciplina_info
+  - action: utter_disciplina_info
