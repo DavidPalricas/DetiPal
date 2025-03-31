@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Handle greeting
+  steps:
+  - intent: greet
+  - action: action_greet_user
+
+- rule: Receive the user name
+  steps:
+  - intent: provide_name
+  - action: action_handle_user_name
+
+- rule: Handle user name question
+  steps:
+  - intent: ask_user_name
+  - action: action_handle_user_name

@@ -1,0 +1,42 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi, my name is [Alice](user_name)
+    - Hi, I am [John](user_name)
+    - Hello there, call me [Michael](user_name)
+    - Good morning, It's [Sarah](user_name)
+    - Good evening, I'm [Bob](user_name)
+    - Hey there, my name is [David](user_name)
+    - Hey dude, I am [Daniel](user_name)
+    - Good afternoon, call me [Marcio](user_name)
+  
+- intent: provide_name
+  examples: |
+    - My name is [John](user_name)
+    - I am [Alice](user_name)
+    - Call me [Michael](user_name)
+    - It's [Sarah](user_name)
+    - I'm [Bob](user_name)
+
+- intent: ask_user_name
+  examples: |
+    - What is my name?
+    - Do you remember my name?
+    - Can you tell me my name?
+    - What is my name again?
+    - Do you know my name?
