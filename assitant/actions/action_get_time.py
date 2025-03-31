@@ -48,8 +48,8 @@ class ActionGetTime(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         """Fetch the current time for the specified location (default to UTC time)."""
-        # Get the location from the entity 'time-location'
-        location = next((tracker.get_latest_entity_values("time-location")), None)
+        # Get the location from the entity 'GPE'
+        location = next((tracker.get_latest_entity_values("GPE")), None)
         utter_msg = ""
         
         if not location:

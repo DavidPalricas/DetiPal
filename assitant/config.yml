@@ -16,7 +16,7 @@ pipeline:
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
   - name: SpacyEntityExtractor
-    dimensions: ["PERSON"]
+    dimensions: ["PERSON", "GPE"]
   - name: RegexFeaturizer
     use_lookup_tables: true
   - name: LexicalSyntacticFeaturizer

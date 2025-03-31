@@ -4,7 +4,7 @@ intents:
   - ask_time
 
 entities:
-  - time-location
+  - GPE
 
 actions:
   - action_get_time
