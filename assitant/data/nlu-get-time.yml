@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+- intent: ask_time
+  examples: |
+    - What time is it in [New York](time-location)?
+    - Can you tell me the time in [Tokyo](time-location)?
+    - What's the time in [Berlin](time-location)?
+    - Give me the current time in [Paris](time-location).
+    - What is the time in [Portugal](time-location)?
+    - Tell me the time in [Sydney](time-location).
+    - Show me the time in [Lisbon](time-location).
+    - What is the current time in [Aveiro](time-location)?
+    - Time in [Beijing](time-location)?
+    - Can you give me the time in [Dubai](time-location)?
+    - What's the local time in [Italy](time-location)?
+    - I want to know the time in [Germany](time-location).
+    - Tell me the time in [Seoul](time-location).
+    - What's the time in [Hamburg](time-location)?
+    - Can you show me the time in [South Korea](time-location)?
+    - What is the time in [Mexico City](time-location)?
