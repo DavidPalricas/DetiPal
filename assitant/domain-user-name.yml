@@ -11,32 +11,37 @@ intents:
   - ask_user_name
 
 entities:
-  - user_name
+  - PERSON
 
 slots:
   user_name:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: user_name
+      - type: custom
 
-# responses:
-#   utter_greet_no_name:
-#   - text: "Hey! How are you?"
-#   - text: "Hello! How are you doing?"
-#   - text: "Hi! How can I help you?"
+responses:
+  utter_greet_no_name:
+  - text: "Hey! How are you?"
+  - text: "Hello! How are you doing?"
+  - text: "Hi! How can I help you?"
 
-#   utter_greet_with_name:
-#   - text: "Hey {user_name}! How are you?"
-#   - text: "Hello {user_name}! How are you doing?"
-#   - text: "Hi {user_name}! How can I help you?"
+  utter_greet_with_name:
+  - text: "Hey {user_name}! How are you?"
+  - text: "Hello {user_name}! How are you doing?"
+  - text: "Hi {user_name}! How can I help you?"
 
-#   utter_show_user_name:
-#   - text: "Your name is {user_name}."
-#   - text: "I remember your name is {user_name}."
+  utter_provided_name:
+  - text: "Nice to meet you, {user_name}!"
+  - text: "Thanks for sharing your name, {user_name}!"
+
+  utter_show_name:
+  - text: "{user_name}"
+  - text: "Your name is {user_name}."
+  - text: "I remember your name is {user_name}."
+  - text: "You told me your name is {user_name}."
   
-#   utter_ask_user_name:
-#   - text: "What is your name?"
-#   - text: "I don't know your name yet. What is it?"
-#   - text: "Could you please tell me your name?"
+  utter_ask_user_name:
+  - text: "What is your name?"
+  - text: "I don't know your name yet. What is it?"
+  - text: "Could you please tell me your name?"

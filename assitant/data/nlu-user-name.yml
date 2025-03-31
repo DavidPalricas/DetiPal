@@ -16,22 +16,22 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-    - Hi, my name is [Alice](user_name)
-    - Hi, I am [John](user_name)
-    - Hello there, call me [Michael](user_name)
-    - Good morning, It's [Sarah](user_name)
-    - Good evening, I'm [Bob](user_name)
-    - Hey there, my name is [David](user_name)
-    - Hey dude, I am [Daniel](user_name)
-    - Good afternoon, call me [Marcio](user_name)
+    - Hi, my name is [Alice](PERSON)
+    - Hi, I am [John](PERSON)
+    - Hello there, call me [Michael](PERSON)
+    - Good morning, It's [Sarah](PERSON)
+    - Good evening, I'm [Bob](PERSON)
+    - Hey there, my name is [David](PERSON)
+    - Hey dude, I am [Daniel](PERSON)
+    - Good afternoon, call me [Marcio](PERSON)
   
 - intent: provide_name
   examples: |
-    - My name is [John](user_name)
-    - I am [Alice](user_name)
-    - Call me [Michael](user_name)
-    - It's [Sarah](user_name)
-    - I'm [Bob](user_name)
+    - My name is [John](PERSON)
+    - I am [Alice](PERSON)
+    - Call me [Michael](PERSON)
+    - It's [Sarah](PERSON)
+    - I'm [Bob](PERSON)
 
 - intent: ask_user_name
   examples: |
