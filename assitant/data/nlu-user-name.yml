@@ -28,10 +28,30 @@ nlu:
 - intent: provide_name
   examples: |
     - My name is [John](PERSON)
+    - My name is [Michael](PERSON)
     - I am [Alice](PERSON)
-    - Call me [Michael](PERSON)
+    - I am [Marie](PERSON)
+    - Call me [Paul](PERSON)
+    - Call me [Anne](PERSON)
     - It's [Sarah](PERSON)
+    - It's [Lila](PERSON)
     - I'm [Bob](PERSON)
+    - I'm [Caroline](PERSON)
+    - My name is [David](PERSON)
+    - My name is [Daniel](PERSON)
+    - My name is [Marcio](PERSON)
+    - I am [David](PERSON)
+    - I am [Daniel](PERSON)
+    - I am [Marcio](PERSON)
+    - Call me [David](PERSON)
+    - Call me [Daniel](PERSON)
+    - Call me [Marcio](PERSON)
+    - It's [David](PERSON)
+    - It's [Daniel](PERSON)
+    - It's [Marcio](PERSON)
+    - I'm [David](PERSON)
+    - I'm [Daniel](PERSON)
+    - I'm [Marcio](PERSON)
 
 - intent: ask_user_name
   examples: |

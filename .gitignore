@@ -2,3 +2,4 @@
 **/__pycache__/
 /assitant/models/
 .env
+story_graph.dot
