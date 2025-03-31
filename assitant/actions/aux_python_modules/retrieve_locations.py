@@ -41,7 +41,7 @@ class RetrieveLocations:
         else:
             RetrieveLocations._instance = self
 
-        self.nlp = spacy.load("en_core_web_sm")
+        self.nlp = spacy.load("en_core_web_lg")
 
     def get_location(self, user_message: str) -> str:
         """
