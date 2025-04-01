@@ -112,8 +112,10 @@ class ActionRecommendMedia(Action):
             return []
         
         divisory_line = f"{'=' * 100}\n"
-
-        response = f"Here are the best {genre.lower()} {'movies' if is_movie else 'TV series'} I found for you 😁:\n"
+              
+        user_name = tracker.get_slot("user_name")
+        
+        response = f"{user_name}, here are the best {genre.lower()} {'movies' if is_movie else 'TV series'} I found for you 😁:\n" if user_name else f"Here are the best {genre.lower()} {'movies' if is_movie else 'TV series'} I found for you 😁:\n"
 
         response += divisory_line
 

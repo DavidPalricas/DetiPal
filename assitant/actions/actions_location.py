@@ -117,14 +117,16 @@ class Give_points_of_interest(Action):
             return []
          
         user_messaged = tracker.latest_message.get('text')
-        location_updated = self.get_intretests_points(location, dispatcher, type_of_place, user_messaged)
+
+        user_name = tracker.get_slot("user_name")
+        location_updated = self.get_intretests_points(location, dispatcher, type_of_place, user_messaged, user_name)
 
         if location_updated:
             return [SlotSet("location", location_updated)]
         return []
     
     def get_intretests_points(self, location: str, dispatcher: CollectingDispatcher, 
-                            type_of_place: str, user_messaged: str) -> str:
+                            type_of_place: str, user_messaged: str, user_name: str) -> str:
         """
         The get_intretests_points method retrieves points of interest based on the user's location and type of place requested.
         It uses the Google Maps API to find nearby places and displays the results to the user.
@@ -139,6 +141,7 @@ class Give_points_of_interest(Action):
             dispatcher: Rasa message dispatcher
             type_of_place: Category of places to search for
             user_messaged: Original user message for potential location updates
+            user_name: The name of the user
             
         Returns:
             If the location is updated (new location provided in the user's message), it returns the updated location to
@@ -174,7 +177,7 @@ class Give_points_of_interest(Action):
             )
 
             if places['results']:
-                self.show_results(places['results'], location, dispatcher)
+                self.show_results(places['results'], location, dispatcher, user_name)
                 return location if location_updated else None
             
             dispatcher.utter_message(text=f"Sorry, I couldn't find any {type_of_place} in {location}.")
@@ -189,7 +192,7 @@ class Give_points_of_interest(Action):
             )
             dispatcher.utter_message(text=error_message)
 
-    def show_results(self, places: List[Dict], location: str, dispatcher: CollectingDispatcher):
+    def show_results(self, places: List[Dict], location: str, dispatcher: CollectingDispatcher, user_name: str):
         """
         The show_results method lists the best palces by rating found in the location given by the user.
         It shows the name, address, rating, link to Google Maps, total reviews and if the place is open or not.
@@ -198,15 +201,15 @@ class Give_points_of_interest(Action):
             places: List of place dictionaries from Google Maps API
             location: The search location
             dispatcher: Rasa message dispatcher
+            user_name: The name of the user
         """
 
         divisory_line = f"{'=' * 100}\n"
         best_places = sorted(places, key=lambda x: x.get('rating', 0), reverse=True)
-
-        response = f"I have found the best places in {location}:\n{divisory_line}"
+        
+        response =  f" {user_name} I have found the best places for you in {location}:\n{divisory_line}" if user_name else f"I have found the best places for you in {location}:\n{divisory_line}"
         
         MAX_STARS_GOOGLE_MAPS = 5.0
-
         MAX_PLACES_TO_SHOW = 10
 
         for i, place in enumerate(best_places[:MAX_PLACES_TO_SHOW], 1):

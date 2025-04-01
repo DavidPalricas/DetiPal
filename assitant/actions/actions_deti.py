@@ -195,9 +195,9 @@ class ActionProfessorInfo(Action):
                 
         professor = tracker.get_slot("professor")
 
-        if professor:
-            dispatcher.utter_message(text=f"I see you're interested in the professor {professor}.")
-            
+        name = tracker.get_slot("user_name")
+
+        if professor:  
             with open("deti_resourses/docentes.csv", 'r', encoding='utf-8') as file:
                 next(file)
                 csv_reader = csv.reader(file)
@@ -211,10 +211,11 @@ class ActionProfessorInfo(Action):
                         match = True
                     
                     if match:
-                        dispatcher.utter_message(text=f"Here are some details about professor {professor}:")
-                        dispatcher.utter_message(text=f"Professor's name: {row[0]}")
-                        dispatcher.utter_message(text=f"Professor's email: {row[1]}")
-                        dispatcher.utter_message(text=f"Professor's office: {row[2]}")
+                        information_message = f"Here, {name}, are some details about Professor {professor}:" if name else f"Here are some details about Professor {professor}:"
+                        dispatcher.utter_message(text=information_message)
+                        dispatcher.utter_message(text=f"👨‍🏫 Professor's name: {row[0]}")
+                        dispatcher.utter_message(text=f"📧 Professor's email: {row[1]}")
+                        dispatcher.utter_message(text=f"🏢 Professor's office: {row[2]}")
                         return []
                     
                 dispatcher.utter_message(text=f"Unfortunately I do not have any information about professor {professor}.")
@@ -248,12 +249,12 @@ class ActionEmailInfo(Action):
         
         email = tracker.get_slot("email")
 
-        if email:
-            dispatcher.utter_message(text=f"I see you're interested in the email {email}.")
-            
+        if email:      
             with open("deti_resourses/docentes.csv", 'r', encoding='utf-8') as file:
                 next(file)
                 csv_reader = csv.reader(file)
+
+                user_name = tracker.get_slot("user_name")
                 
                 for row in csv_reader:
                     match = False
@@ -261,11 +262,13 @@ class ActionEmailInfo(Action):
                     if email.lower() == row[1].lower():
                         match = True
                     
+
                     if match:
-                        dispatcher.utter_message(text=f"Here are some details about the email {email}:")
-                        dispatcher.utter_message(text=f"Professor's name: {row[0]}")
-                        dispatcher.utter_message(text=f"Professor's email: {row[1]}")
-                        dispatcher.utter_message(text=f"Professor's office: {row[2]}")
+
+                        information_message = f"{user_name}, the  mail belongs to Professor {row[0]}." if user_name else f"The mail belongs to Professor {self.get_professor_name(row[0])}."
+
+                        dispatcher.utter_message(text=information_message)
+                        dispatcher.utter_message(text=f"Is office is in locted in: {row[2]}, if you need to visit him.")
                         return []
                     
                 dispatcher.utter_message(text=f"Unfortunately I do not have any information about the email {email}.")
