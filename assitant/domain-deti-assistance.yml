@@ -107,6 +107,9 @@ responses:
   # utter_disciplina_list:
   # - text: "This are the classes you will find in {curso} on the {semestre} semestre of your {grau} degree."
 
+  # utter_disciplina_list_semeste:
+  # - text: "disciplina_list_semeste: semestre-{semestre}."
+
   utter_disciplina_info:
   - text: "disciplina_info: cadeira-{cadeira}, codigo-{codigo}, sigla_cadeira-{sigla_cadeira}."
 
@@ -119,11 +122,9 @@ responses:
   utter_course_list_degree:
   - text: "course_list_degree: semestre-{semestre}."
 
-  # utter_disciplina_list_semeste:
-  # - text: "disciplina_list_semeste: semestre-{semestre}."
-
   utter_disciplina_list_course:
   - text: "disciplina_list_course: curso-{curso}, codigo-{codigo}, sigla_curso-{sigla_curso}."
 
 actions:
   - action_course_info
+  - action_disciplina_info

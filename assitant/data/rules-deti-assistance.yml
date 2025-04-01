@@ -20,7 +20,7 @@ rules:
 - rule: ask_about_disciplina
   steps:
   - intent: disciplina_info
-  - action: utter_disciplina_info
+  - action: action_disciplina_info
 
 - rule: ask_about_professor
   steps:

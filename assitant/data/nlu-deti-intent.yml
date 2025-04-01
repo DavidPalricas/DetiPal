@@ -50,41 +50,41 @@ nlu:
 
 - intent: professor_info
   examples: |
-    - Who is [Professor João Silva](professor)?
-    - Can you give me details about [Dr. Maria Costa](professor)?
-    - What does [Carlos Mendes](professor) teach?
-    - Which subjects are taught by [Ana Pereira](professor)?
-    - What department is [Miguel Rocha](professor) in?
-    - Which courses is [João Martins](professor) associated with?
-    - What is [Sofia Almeida](professor)'s email?
-    - How can I contact [Fernando Lopes](professor)?
-    - Where is the office of [Rita Fernandes](professor)?
-    - What is the office number of [Pedro Gonçalves](professor)?
+    - Who is professor [Diogo Gomes](professor)?
+    - Can you give me details about [Dr. Adrego Rocha](professor)?
+    - What does [Luis Lopes](professor) teach?
+    - Which subjects are taught by [Suzana Sargento](professor)?
+    - What department is [Paulo Dias](professor) in?
+    - Which courses is [Antonio Teixeira](professor) associated with?
+    - What is [Daniel Corujo](professor)'s email?
+    - How can I contact [Jose Cura](professor)?
+    - Where is the office of [Luís Lopes](professor)?
+    - What is the office number of [Andre Zúquete](professor)?
     - In which building is [Helena Ribeiro](professor)'s office?
-    - What is the research area of [Tiago Moreira](professor)?
-    - What is [Joana Figueiredo](professor) working on?
-    - Is [Carlos Antunes](professor) available for thesis supervision?
-    - Where can I find the schedule of [Raquel Nunes](professor)?
-    - Which department does [Ricardo Sousa](professor) belong to?
-    - What are the office hours of [Susana Lopes](professor)?
-    - What role does [André Carvalho](professor) have in the university?
-    - Does [Luis Batista](professor) have a personal webpage?
-    - Can you provide information on [Professor Eduardo Matos](professor)?
+    - What is the research area of [Pedro Cabtral](professor)?
+    - What is [Jose Moreira](professor) working on?
+    - Is [Rui Aguiar](professor) available for thesis supervision?
+    - Where can I find the schedule of [Pedro Rito](professor)?
+    - Which department does [Nuno Lau](professor) belong to?
+    - What are the office hours of [Miguel Silva](professor)?
+    - What role does [Tomas Silva](professor) have in the university?
+    - Does [Jorge Mota](professor) have a personal webpage?
+    - Can you provide information on professor [Eurico Pereira](professor)?
 
 - intent: email_info
   examples: |
-    - Who owns the email [joao.silva@university.edu](email)?
-    - Can you tell me whose email is [maria.costa@university.edu](email)?
-    - To whom does the email [carlos.mendes@university.edu](email) belong?
-    - Which professor has the email [ana.pereira@university.edu](email)?
-    - Is [miguel.rocha@university.edu](email) a student or a professor?
-    - Who is the owner of the email [joana.figueiredo@university.edu](email)?
-    - Does [rita.fernandes@university.edu](email) belong to a faculty member?
-    - Can you identify the person behind [pedro.goncalves@university.edu](email)?
-    - What is the name of the person using [helena.ribeiro@university.edu](email)?
-    - Find the owner of [tiago.moreira@university.edu](email)
-    - Is [andre.carvalho@university.edu](email) an academic staff member?
-    - Tell me who uses [susana.lopes@university.edu](email)?
+    - Who owns the email [jrgomes@ua.pt](email)?
+    - Can you tell me whose email is [lsl@ua.pt](email)?
+    - To whom does the email [susana@ua.pt](email) belong?
+    - Which professor has the email [dgomes@ua.pt](email)?
+    - Is [jmadeira@ua.pt](email) a student or a professor?
+    - Who is the owner of the email [efp@ua.pt](email)?
+    - Does [ndias@ua.pt](email) belong to a faculty member?
+    - Can you identify the person behind [tos@ua.pt](email)?
+    - What is the name of the person using [paulo.dias@ua.pt](email)?
+    - Find the owner of [jose.moreira@ua.pt](email)
+    - Is [vamaral@ua.pt](email) an academic staff member?
+    - Tell me who uses [nunolau@ua.pt](email)?
     - Is [ricardo.sousa@university.edu](email) a professor?
 
 - intent: course_list_degree
