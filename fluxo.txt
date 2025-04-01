@@ -1,0 +1,74 @@
+course_info:
+    - user: LECI é curso de mestrado?
+    - bot: Vejo que estas interressado no curso LECI aqui estão algumas informações relativas:
+            - Grau
+            - Codigo
+            - Nome
+            - Sigla 
+
+    # ideia historia -> posso listar as cadeiras do curso queres?
+    
+disciplina_info:   
+    - user: Em que semestre decorre SIO?
+    - bot: Reparo que estas interressado na cadeira SIO porém existe varias com essa Sigla
+            listar...
+            Diz-me o código ou nome duma se estiveres interressado.
+    - user: 40897
+    - bot: Vejo que estas interressado na cadeira SIO (codigo) aqui estão algumas informações relativas:
+            - Grau
+            - Semestre
+            - Codigo
+            - Nome
+            - Sigla 
+            - Regente 
+            - Cursos associados 
+
+professor_info:
+    - user: Qual é o gabinete do lsl?
+    - bot: Aqui esta a informação relativa ao docente:
+        - Nome
+        - email
+        - gabinete 
+        - cadeiras que Regente
+
+email_info: 
+    - user: de quem é o email ..@..
+    - bot: este email pertence a:
+        - Nome
+        - email
+        - gabinete 
+        - cadeiras que Regente
+
+ask_regent_disciplina:
+    - user: de quem é o regente de informação
+    - bot: este é o regente de IA:
+        - Nome
+        - email
+        - gabinete 
+        - cadeiras que Regente
+
+course_acronym:
+    - user: LECI significa o que
+    - bot: Este acrónimo refere-se ao curso ...
+
+disciplina_acronym:
+    - user: Cadeira RC2 significa o que
+    - bot: Este acrónimo refere-se a cadeira ...
+
+course_list_degree:
+    - user: que cursos de mestrado são oferecidos
+    - bot: O deti oferece diversos cursos de mestrado:
+        lista...
+
+disciplina_list_course
+    - user: LECI tem de estudar que cadeiras?
+    - bot: Reparo que estas interressado nas cadeira de CT, aqui esta o que se estuda:
+            listar...
+
+disciplina_list_semeste
+    - user: Quais são as cadeiras do deti de 1ºsemestre
+    - bot: ...
+        listar..
+
+
+
