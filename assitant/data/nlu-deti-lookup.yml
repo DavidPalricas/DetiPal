@@ -15,7 +15,8 @@ nlu:
 
 - regex: sigla_cadeira
   examples: |
-   - [A-Za-z]+-?[A-Za-z]*-?[IVX]*
+   - [A-Za-z]+-?[IVX]*
+#  - [A-Za-z]+-?[A-Za-z]*-?[IVX]*
 
 - lookup: grau
   examples: |

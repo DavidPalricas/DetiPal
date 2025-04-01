@@ -12,7 +12,7 @@ intents:
   # - disciplina_acronym #Cadeira RC2 significa o que
 
   # list courses
-  - course_list_degree # que cursos de mestrado são oferecidos
+  - course_list_degree # que cursos de mestrado são oferecidos, que cursos são oferecidos
   #- course_list_disciplina # que cursos têm Calculo
 
   # list disciplinas (muitas disciplinas pedir ao user para ser mais especifico nas stories)
@@ -110,21 +110,19 @@ responses:
   # utter_disciplina_list_semeste:
   # - text: "disciplina_list_semeste: semestre-{semestre}."
 
-  utter_disciplina_info:
-  - text: "disciplina_info: cadeira-{cadeira}, codigo-{codigo}, sigla_cadeira-{sigla_cadeira}."
+  # utter_disciplina_info:
+  # - text: "disciplina_info: cadeira-{cadeira}, codigo-{codigo}, sigla_cadeira-{sigla_cadeira}."
 
-  utter_professor_info:
-  - text: "professor_info: professor-{professor}."
-
-  utter_email_info:
-  - text: "email_info: email-{email}."
-
-  utter_course_list_degree:
-  - text: "course_list_degree: semestre-{semestre}."
+  # utter_course_list_degree:
+  # - text: "course_list_degree: grau-{grau}."
 
   utter_disciplina_list_course:
-  - text: "disciplina_list_course: curso-{curso}, codigo-{codigo}, sigla_curso-{sigla_curso}."
+  - text: "disciplina_list_course: curso-{curso}, codigo-{codigo}, sigla_curso-{sigla_curso}, semestre-{semestre}."
 
 actions:
   - action_course_info
   - action_disciplina_info
+  - action_professor_info
+  - action_email_info
+  - action_course_list_degree
+  - action_disciplina_list_course

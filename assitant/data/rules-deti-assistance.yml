@@ -25,22 +25,22 @@ rules:
 - rule: ask_about_professor
   steps:
   - intent: professor_info
-  - action: utter_professor_info
+  - action: action_professor_info
 
 - rule: ask_about_email
   steps:
   - intent: email_info
-  - action: utter_email_info
+  - action: action_email_info
 
 - rule: course_list_degree
   steps:
   - intent: course_list_degree
-  - action: utter_course_list_degree
+  - action: action_course_list_degree
 
 - rule: disciplina_list_course
   steps:
   - intent: disciplina_list_course
-  - action: utter_disciplina_list_course
+  - action: action_disciplina_list_course
 
 # - rule: disciplina_list_semeste
 #   steps:
