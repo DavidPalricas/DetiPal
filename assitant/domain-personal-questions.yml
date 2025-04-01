@@ -12,7 +12,7 @@ intents:
 
 responses:
   utter_ask_identity:
-    - text: "I'm Chill Deti Dude, just not only your personal assistant, but also your brother 💪"
+    - text: "I'm DETI Pal, just not only your personal assistant, but also your brother 💪"
   utter_ask_home:
     - text: "I live in your device, to help you whenever you need me, my friend! 😊"
   utter_ask_hobby:

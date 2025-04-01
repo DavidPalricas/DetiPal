@@ -9,7 +9,7 @@ intents:
 responses:
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDg3Ym95cWZmdDlwdmt1OGR1emY2MXgxaTA3YmE1cWh2aDVpdjNxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yFQ0ywscgobJK/giphy.gif"
 
   utter_happy:
   - text: "Great, carry on!"
