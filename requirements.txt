@@ -1,0 +1,7 @@
+rasa
+spacy
+googlemaps
+pandas
+tmdbsimple 
+timezonefinder
+geopy
