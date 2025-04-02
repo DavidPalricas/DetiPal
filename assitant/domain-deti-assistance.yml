@@ -27,9 +27,9 @@ intents:
 entities:
 - grau #lookup 
 - semestre #regex or lookup 
-- cadeira
+- disciplina
 - curso # lookup 
-- sigla_cadeira #regex
+- sigla_disciplina #regex
 - sigla_curso #lookup 
 - professor
 - email #regex
@@ -50,12 +50,12 @@ slots:
     - type: from_entity
       entity: semestre
 
-  cadeira:
+  disciplina:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: cadeira
+      entity: disciplina
 
   curso:
     type: text
@@ -64,12 +64,12 @@ slots:
     - type: from_entity
       entity: curso
 
-  sigla_cadeira:
+  sigla_disciplina:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: sigla_cadeira
+      entity: sigla_disciplina
 
   sigla_curso:
     type: text

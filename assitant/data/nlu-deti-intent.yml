@@ -23,30 +23,30 @@ nlu:
 
 - intent: disciplina_info
   examples: |
-    - I want to know more about [C-I](sigla_cadeira)
+    - I want to know more about [C-I](sigla_disciplina)
     - Can you give me information about [12345](codigo)?
-    - Tell me more about the subject [Redes de Computadores](cadeira)
-    - What is the content of [POO](sigla_cadeira)?
+    - Tell me more about the subject [Redes de Computadores](disciplina)
+    - What is the content of [POO](sigla_disciplina)?
     - Give me details on [67890](codigo)
-    - Who is the professor for [Álgebra Linear](cadeira)?
-    - Who teaches [BD](sigla_cadeira)?
+    - Who is the professor for [Álgebra Linear](disciplina)?
+    - Who teaches [BD](sigla_disciplina)?
     - Show me the syllabus for [87654](codigo)
-    - In which semester is [Compiladores](cadeira) taught?
-    - What degree level is [SO](sigla_cadeira) from?
+    - In which semester is [Compiladores](disciplina) taught?
+    - What degree level is [SO](sigla_disciplina) from?
     - Is [43210](codigo) a master's or bachelor's course?
-    - What are the learning outcomes of [Matemática Discreta](cadeira)?
-    - Which courses include [IA](sigla_cadeira)?
-    - Is [Arquitetura de Computadores](cadeira) part of wich course?
-    - Does [Segurança Informática](cadeira) belong to any bachelor's programs?
-    - Where can I find the materials for [SI-II](sigla_cadeira)?
+    - What are the learning outcomes of [Matemática Discreta](disciplina)?
+    - Which courses include [IA](sigla_disciplina)?
+    - Is [Arquitetura de Computadores](disciplina) part of wich course?
+    - Does [Segurança Informática](disciplina) belong to any bachelor's programs?
+    - Where can I find the materials for [SI-II](sigla_disciplina)?
     - Is [23456](codigo) available in the first semester?
-    - Is [Engenharia de Software](cadeira) taught in the second semester?
-    - What courses include [Programação Funcional](cadeira)?
-    - What is the full name of [SI-I](sigla_cadeira)?
+    - Is [Engenharia de Software](disciplina) taught in the second semester?
+    - What courses include [Programação Funcional](disciplina)?
+    - What is the full name of [SI-I](sigla_disciplina)?
     - Does [87654](codigo) have any prerequisites?
-    - Is [Redes de Computadores](cadeira) available this semester?
-    - Which degree level includes [Análise de Algoritmos](cadeira)?
-    - What's the course code for [Segurança Informática](cadeira)?
+    - Is [Redes de Computadores](disciplina) available this semester?
+    - Which degree level includes [Análise de Algoritmos](disciplina)?
+    - What's the course code for [Segurança Informática](disciplina)?
 
 - intent: professor_info
   examples: |
@@ -147,16 +147,16 @@ nlu:
 #     - Can you list your [undergraduate](grau) courses?
 #     - I'm interested in [postgraduate](grau) degrees.
 #     - Which [master's](grau) degrees are available at the department?
-#     - Which degrees include [Cálculo I](cadeira)?
-#     - I want to see all programs that have [LSD](cadeira).
-#     - Do any courses include [Compiladores](cadeira)?
-#     - Show degrees that include the subject [40433](cadeira).
-#     - What degrees contain [Cálculo II](cadeira) in the curriculum?
-#     - I want to know all [bachelor's](grau) degrees with [Sistemas Inteligentes](cadeira).
-#     - Which [master's](grau) programs include [IM](cadeira)?
-#     - Are there any [undergraduate](grau) courses that have [40756](cadeira)?
-#     - List [master's](grau) degrees that offer [Programação Orientada a Objetos](cadeira).
-#     - Do any [bachelor's](grau) programs cover [Fundamentos de Programação](cadeira)?
+#     - Which degrees include [Cálculo I](disciplina)?
+#     - I want to see all programs that have [LSD](disciplina).
+#     - Do any courses include [Compiladores](disciplina)?
+#     - Show degrees that include the subject [40433](disciplina).
+#     - What degrees contain [Cálculo II](disciplina) in the curriculum?
+#     - I want to know all [bachelor's](grau) degrees with [Sistemas Inteligentes](disciplina).
+#     - Which [master's](grau) programs include [IM](disciplina)?
+#     - Are there any [undergraduate](grau) courses that have [40756](disciplina)?
+#     - List [master's](grau) degrees that offer [Programação Orientada a Objetos](disciplina).
+#     - Do any [bachelor's](grau) programs cover [Fundamentos de Programação](disciplina)?
 #     - What courses are offered by the department?
 #     - Could you give me a list of all degrees available?
 #     - I want to see all the academic programs.

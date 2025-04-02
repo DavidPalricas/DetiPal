@@ -13,7 +13,7 @@ nlu:
   examples: |
     - \d{4,5}
 
-- regex: sigla_cadeira
+- regex: sigla_disciplina
   examples: |
    - [A-Za-z]+-?[IVX]*
 #  - [A-Za-z]+-?[A-Za-z]*-?[IVX]*
