@@ -23,7 +23,7 @@ Follow the steps below to set up and run the project.
 
 ### 3. Install Rasa and other dependecies
 ```bash
-# In one Anaconda Prompt
+# In one Anaconda Prompt, in the project directory
 conda create --name rasa-env python=3.10
 conda activate rasa-env
 pip install -r requirements.txt 
@@ -32,7 +32,7 @@ python -m spacy download en_core_web_lg
 
 ### 4. Train the chatbot model
 ```bash
-# In the previous Anaconda Prompt
+# In the previous Anaconda Prompt, now on the assistant directory
 rasa train --domain .
 ```
 
@@ -41,16 +41,16 @@ rasa train --domain .
 # In previous Anaconda Prompt
 rasa run actions
 
-# In the other Anaconda Prompt 
+# In the other Anaconda Prompt (in the assistant directory)
 activate rasa-env && rasa shell --endpoints endpoints.yml
 ```
 
 **Note**: After completing the steps above for the first time, you can run all commands in a single line:
 ```bash
-# In the Anaconda Prompt
+# In the Anaconda Prompt (in the assistant directory)
 activate rasa-env && rasa train --domain . && rasa shell --endpoints endpoints.yml
 
-# On another Anaconda Prompt
+# On another Anaconda Prompt (in the assistant directory)
 activate rasa-env && rasa run actions
 ```
 
