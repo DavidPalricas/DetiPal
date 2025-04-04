@@ -1,6 +1,6 @@
-/assitant/.rasa/cache
+/assistant/.rasa/cache
 .venv/
 **/__pycache__/
-/assitant/models/
+/assistant/models/
 .env
 story_graph.dot

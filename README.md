@@ -1,6 +1,20 @@
-# ChatbotSI2
+# Deti Pal
 ## Project Overview
 This chatbot was developed as part of the first project of the [Intelligent Systems II Module](https://www.ua.pt/en/uc/15052) at the University of Aveiro during the 2024/2025 academic year.
+
+## Features 
+- Greet the user and ask for their name  
+- Say goodbye to the user  
+- Recognize when the user is feeling sad and cheer them up  
+- Recognize words of thanks  
+- Provide some points of interest in a certain location  
+- Suggest TV Shows/Movies  
+- Tell jokes  
+- Answer personal questions (e.g., What is your name)  
+- Give the current time  
+- Remember the user’s favorite media (e.g., book, music)  
+- Understand compliments and insults  
+- Give some information from DETI (courses and professors)  
 
 ## Prerequisites
 * Python 3.10 
