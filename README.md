@@ -1,6 +1,7 @@
 # Deti Pal
 ## Project Overview
-This chatbot was developed as part of the first project of the [Intelligent Systems II Module](https://www.ua.pt/en/uc/15052) at the University of Aveiro during the 2024/2025 academic year.
+DETI Pal is a chatbot that can have a normal conversation with users, provide various services, and answer personal questions. Its main feature is providing information about courses and professors from DETI (Department of Electronics, Telecommunications, and Informatics) at the University of Aveiro.
+This chatbot was developed using **Rasa** and as part of the first project of the [Intelligent Systems II Module](https://www.ua.pt/en/uc/15052) at the University of Aveiro during the 2024/2025 academic year.
 
 ## Features 
 - Greet the user and ask for their name  
