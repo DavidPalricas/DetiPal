@@ -16,6 +16,9 @@ This chatbot was developed as part of the first project of the [Intelligent Syst
 - Understand compliments and insults  
 - Give some information from DETI (courses and professors)  
 
+## Demo
+[![Watch Here](https://img.youtube.com/vi/qmsYfQUrMM0/0.jpg)](https://youtu.be/qmsYfQUrMM0?si=CAxktO4R1-bx3P4P)
+
 ## Prerequisites
 * Python 3.10 
 * Anaconda Prompt (Miniconda3) [Link to Install](https://docs.conda.io/projects/miniconda/en/latest/)
